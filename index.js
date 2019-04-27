@@ -92,4 +92,4 @@ Emailer.admin = {
 };
 
 module.exports = Emailer;
-module.exports.gmailTransport = nodemailer.createTransport(nodemailerSettings);
+// module.exports.gmailTransport = nodemailer.createTransport(nodemailerSettings);
