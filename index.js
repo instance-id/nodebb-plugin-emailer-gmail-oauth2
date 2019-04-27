@@ -37,19 +37,22 @@ Emailer.init = function(params, callback) {
 	}
 
 	Meta.settings.get('gmail', function(err, settings) {
-		service: 'Gmail',
 		if (!err && settings 
 				 && settings.clientid 
 				 && settings.clientsecret 
 				 && settings.refreshToken 
 				 && settings.fromAddress 
 				 && settings.authorizedURI) {
-			server = Nodemailer({
-				type: 'OAuth2',
-				user: settings.fromAddress,
-				clientId: settings.clientId,
-				clientSecret: settings.clientSecret,
-				refreshToken: settings.refreshToken,
+
+			server = Nodemailer.createTransport({
+				service: 'Gmail',
+				auth: {
+					type: 'OAuth2',
+					user: settings.fromAddress,
+					clientId: settings.clientId,
+					clientSecret: settings.clientSecret,
+					refreshToken: settings.refreshToken,
+				},
 			});
 		} else {
 			winston.error('[plugins/emailer-gmail] You must fill out this shit!');
@@ -99,4 +102,3 @@ Emailer.admin = {
 };
 
 module.exports = Emailer;
-// module.exports.gmailTransport = nodemailer.createTransport(nodemailerSettings);
