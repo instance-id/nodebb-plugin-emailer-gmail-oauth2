@@ -26,12 +26,18 @@ const refreshToken = process.env.REFRESH_TOKEN;
 //Create OAuth2 client
 const oauth2Client = new OAuth2(clientId, clientSecret, redirectUrl);
 
+//Set OAuth2 refresh token
+oauth2Client.setCredentials({
+	refresh_token: refreshToken,
+  });
+
 Emailer.init = function(params, callback) {
 	function render(req, res, next) {
 		res.render('admin/plugins/emailer-gmail', {});
 	}
 
 	Meta.settings.get('gmail', function(err, settings) {
+		service: 'Gmail',
 		if (!err && settings 
 				 && settings.clientid 
 				 && settings.clientsecret 
@@ -39,10 +45,11 @@ Emailer.init = function(params, callback) {
 				 && settings.fromAddress 
 				 && settings.authorizedURI) {
 			server = Nodemailer({
+				type: 'OAuth2',
+				user: settings.fromAddress,
 				clientId: settings.clientId,
 				clientSecret: settings.clientSecret,
 				refreshToken: settings.refreshToken,
-				fromAddress: settings.fromAddress,
 			});
 		} else {
 			winston.error('[plugins/emailer-gmail] You must fill out this shit!');
