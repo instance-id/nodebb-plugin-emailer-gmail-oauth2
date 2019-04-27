@@ -1,3 +1,5 @@
+
+# PLUGIN IS UNDER DEVELOPMENT AND TESTING - DO NOT USE! IT WILL NOT WORK YET!
 # NodeBB Emailer (Gmail)
 
 This NodeBB plugin allows NodeBB to send emails to users through the third-party transactional email service [Gmail](http://gmail.com).
