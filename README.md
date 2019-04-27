@@ -8,4 +8,5 @@ To customise options for this plugin, please consult the "Emailer (Gmail)" page 
 
 ## Installation
 
-    npm install nodebb-plugin-emailer-gmail
+    EVENTUALLY WILL BE THIS - NOT YET
+    // npm install nodebb-plugin-emailer-gmail
