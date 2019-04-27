@@ -13,20 +13,19 @@ var	fs = require('fs'),
 	server;
 
 // --- Required dependencies --------------------
-const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
 
-// --- OAuth2 parameters ------------------------
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-const redirectUrl = process.env.REDIRECT_URL;
-const refreshToken = process.env.REFRESH_TOKEN;
+// --- Test OAuth2 parameters -------------------
+// const clientId = process.env.CLIENT_ID;
+// const clientSecret = process.env.CLIENT_SECRET;
+// const redirectUrl = process.env.REDIRECT_URL;
+// const refreshToken = process.env.REFRESH_TOKEN;
 
-//Create OAuth2 client
+// --- Create OAuth2 client ---------------------
 const oauth2Client = new OAuth2(clientId, clientSecret, redirectUrl);
 
-//Set OAuth2 refresh token
+// --- Set OAuth2 refresh token -----------------
 oauth2Client.setCredentials({
 	refresh_token: refreshToken,
   });
@@ -38,11 +37,11 @@ Emailer.init = function(params, callback) {
 
 	Meta.settings.get('gmail', function(err, settings) {
 		if (!err && settings 
-				 && settings.clientid 
-				 && settings.clientsecret 
+				 && settings.clientId 
+				 && settings.clientSecret 
 				 && settings.refreshToken 
 				 && settings.fromAddress 
-				 && settings.authorizedURI) {
+				 && settings.redirectUrl) {
 
 			server = Nodemailer.createTransport({
 				service: 'Gmail',
@@ -65,6 +64,7 @@ Emailer.init = function(params, callback) {
 	callback();
 };
 
+// --- Send message -----------------------------
 Emailer.send = function(data, callback) {
 	if (!server) {
 		winston.error('[emailer.gmail] Gmail is not set up properly!')
@@ -89,6 +89,7 @@ Emailer.send = function(data, callback) {
 	});
 };
 
+// --- Include admin menu -----------------------
 Emailer.admin = {
 	menu: function(custom_header, callback) {
 		custom_header.plugins.push({
