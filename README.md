@@ -13,7 +13,7 @@ I appreciate you taking a look at my plugin. The purpose for this plugin was, I 
 
 -----------------
 
-## IMPORTANT NOTES - In order to send email from an address that is not your accounts primary email address it *must* be added to your gmail account as a secondary / alias email account. To know if it is properly added, you can open the https://mail.google.com and click Compose to begin writing a new email. In the From: field of the email message, if you are able to hit a dropdown and select a different email address to send from, then you will be able to put that address into the "Email Address" section within the Email Settings box. If not, you must properly add the domain and address to your account as a secondary/alias domain/address.
+### IMPORTANT NOTES - In order to send email from an address that is not your accounts primary email address it *must* be added to your gmail account as a secondary / alias email account. To know if it is properly added, you can open the https://mail.google.com and click Compose to begin writing a new email. In the From: field of the email message, if you are able to hit a dropdown and select a different email address to send from, then you will be able to put that address into the "Email Address" section within the Email Settings box. If not, you must properly add the domain and address to your account as a secondary/alias domain/address.
 
 Here are instructions for adding a secondary/alias domain to your Gmail account.
 https://mediatemple.net/community/products/googleapps/204645570/adding-a-domain-alias-in-g-suite
