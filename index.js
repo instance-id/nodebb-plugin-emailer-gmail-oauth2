@@ -1,7 +1,3 @@
-//Allow for environment variable import
-require('dotenv').config();
-
-// --- Forum Requirements -----------------------
 var	fs = require('fs'),
 	path = require('path'),
 
@@ -12,15 +8,25 @@ var	fs = require('fs'),
 	Nodemailer = require("nodemailer"),
 	server;
 
+// --- OAuth2 parameters -------------------
+var clientId;
+var clientSecret;
+var redirectUrl;
+var refreshToken;
+var fromAddress;
+
+// --- Getting settings for Oauth2 --------------
+Meta.settings.get('gmail-oauth2', function(err, settings) {
+	clientId = settings.clientId;
+	clientSecret = settings.clientSecret; 
+	redirectUrl = settings.redirectUrl;
+	refreshToken = settings.refreshToken;
+	console.log('TEST : clientId from settings: ' + clientId);
+});
+
 // --- Required dependencies --------------------
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
-
-// --- Test OAuth2 parameters -------------------
-// const clientId = process.env.CLIENT_ID;
-// const clientSecret = process.env.CLIENT_SECRET;
-// const redirectUrl = process.env.REDIRECT_URL;
-// const refreshToken = process.env.REFRESH_TOKEN;
 
 // --- Create OAuth2 client ---------------------
 const oauth2Client = new OAuth2(clientId, clientSecret, redirectUrl);
@@ -32,17 +38,14 @@ oauth2Client.setCredentials({
 
 Emailer.init = function(params, callback) {
 	function render(req, res, next) {
-		res.render('admin/plugins/emailer-gmail', {});
+		res.render('admin/plugins/emailer-gmail-oauth2', {});
 	}
 
-	Meta.settings.get('gmail', function(err, settings) {
+	Meta.settings.get('gmail-oauth2', function(err, settings) {
 		if (!err && settings 
 				 && settings.clientId 
-				 && settings.clientSecret 
-				 && settings.refreshToken 
-				 && settings.fromAddress 
-				 && settings.redirectUrl) {
-
+				 && settings.clientSecret
+				 && settings.refreshToken ) {
 			server = Nodemailer.createTransport({
 				service: 'Gmail',
 				auth: {
@@ -54,12 +57,11 @@ Emailer.init = function(params, callback) {
 				},
 			});
 		} else {
-			winston.error('[plugins/emailer-gmail] You must fill out this shit!');
+			winston.error('[plugins/emailer-gmail-oauth2] You must fill out this shit!');
 		}
 	});
-
-	params.router.get('/admin/plugins/emailer-gmail', params.middleware.admin.buildHeader, render);
-	params.router.get('/api/admin/plugins/emailer-gmail', render);
+	params.router.get('/admin/plugins/emailer-gmail-oauth2', params.middleware.admin.buildHeader, render);
+	params.router.get('/api/admin/plugins/emailer-gmail-oauth2', render);
 
 	callback();
 };
@@ -67,11 +69,12 @@ Emailer.init = function(params, callback) {
 // --- Send message -----------------------------
 Emailer.send = function(data, callback) {
 	if (!server) {
-		winston.error('[emailer.gmail] Gmail is not set up properly!')
+		winston.error('[emailer.gmail-oauth2] Gmail-oauth is not set up properly!')
 		return callback(null, data);
 	}
 
-	server.messages().send({
+	// server.messages().send({
+	server.sendMail({
 		to: data.to,
 		subject: data.subject,
 		from: data.from,
@@ -79,10 +82,10 @@ Emailer.send = function(data, callback) {
 		text: data.plaintext
 	}, function (err, body) {
 		if (!err) {
-			winston.verbose('[emailer.gmail] Sent `' + data.template + '` email to uid ' + data.uid);
+			winston.verbose('[emailer.gmail-oauth2] Sent `' + data.template + '` email to uid ' + data.uid);
 		} else {
-			winston.warn('[emailer.gmail] Unable to send `' + data.template + '` email to uid ' + data.uid + '!!');
-			winston.error('[emailer.gmail] (' + err.message + ')');
+			winston.warn('[emailer.gmail-oauth2] Unable to send `' + data.template + '` email to uid ' + data.uid + '!!');
+			winston.error('[emailer.gmail-oauth2] (' + err.message + ')');
 		}
 
 		return callback(err, data);
@@ -93,9 +96,9 @@ Emailer.send = function(data, callback) {
 Emailer.admin = {
 	menu: function(custom_header, callback) {
 		custom_header.plugins.push({
-			"route": '/plugins/emailer-gmail',
+			"route": '/plugins/emailer-gmail-oauth2',
 			"icon": 'fa-envelope-o',
-			"name": 'Emailer (Gmail)'
+			"name": 'Emailer (Gmail-Oauth2)'
 		});
 
 		callback(null, custom_header);

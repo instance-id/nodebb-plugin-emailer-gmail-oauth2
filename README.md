@@ -1,12 +1,12 @@
 
 # PLUGIN IS UNDER DEVELOPMENT AND TESTING - DO NOT USE! IT WILL NOT WORK YET!
-# NodeBB Emailer (Gmail)
+# NodeBB Emailer (Gmail-Oauth2)
 
-This NodeBB plugin allows NodeBB to send emails to users through the third-party transactional email service [Gmail](http://gmail.com).
+This NodeBB plugin allows NodeBB to send emails to users through the third-party transactional email service [Gmail-Oauth2](http://gmail.com).
 
-To customise options for this plugin, please consult the "Emailer (Gmail)" page in the administration panel, under the "Plugins" heading.
+To customise options for this plugin, please consult the "Emailer (Gmail-Oauth2)" page in the administration panel, under the "Plugins" heading.
 
 ## Installation
 
     EVENTUALLY WILL BE THIS - NOT YET
-    // npm install nodebb-plugin-emailer-gmail
+    // npm install nodebb-plugin-emailer-gmail-oauth2

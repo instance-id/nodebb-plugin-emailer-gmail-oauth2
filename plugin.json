@@ -1,8 +1,8 @@
 {
-    "id": "nodebb-plugin-emailer-gmail",
-    "name": "Emailer (Gmail)",
+    "id": "nodebb-plugin-emailer-gmail-oauth2",
+    "name": "Emailer (Gmail-Oauth2)",
     "description": "Gmail Emailer for NodeBB",
-    "url": "https://github.com/instance-id/nodebb-plugin-emailer-gmail",
+    "url": "https://github.com/instance-id/nodebb-plugin-emailer-gmail-oauth2",
     "library": "./index.js",
     "templates": "templates",
     "hooks": [

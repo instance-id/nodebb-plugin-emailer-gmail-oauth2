@@ -1,11 +1,10 @@
-<body>
-<h1><i class="fa fa-envelope-o"></i> Emailer (Gmail)</h1>
+<h1><i class="fa fa-envelope-o"></i> Emailer (Gmail-Oauth2)</h1>
 
 <div class="row">
 	<div class="col-lg-12">
 		<blockquote>
 			<p>
-				Gmail Oauth plugin.<br /><br />
+				Gmail Oauth2 plugin.<br /><br />
 			</p>
 		</blockquote>
 			<p>
@@ -35,14 +34,14 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="form-group">
-					<label for="fromAddress">Address From:</label>
-					<input type="text" class="form-control" id="fromAddress" name="fromAddress" />
+					<label for="refreshToken">Refresh_Token</label>
+					<input type="text" class="form-control" id="refreshToken" name="refreshToken" />
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="form-group">
-					<label for="refreshToken">Refresh_Token</label>
-					<input type="text" class="form-control" id="refreshToken" name="refreshToken" />
+					<label for="fromAddress">Address From:</label>
+					<input type="text" class="form-control" id="fromAddress" name="fromAddress" />
 				</div>
 			</div>
 		</div>
@@ -60,13 +59,13 @@
 
 <script type="text/javascript">
 	require(['settings'], function(Settings) {
-		Settings.load('gmail', $('.emailer-settings'));
+		Settings.load('gmail-oauth2', $('.emailer-settings'));
 
 		$('#save').on('click', function() {
-			Settings.save('gmail', $('.emailer-settings'), function() {
+			Settings.save('gmail-oauth2', $('.emailer-settings'), function() {
 				app.alert({
 					type: 'success',
-					alert_id: 'gmail-saved',
+					alert_id: 'gmail-oauth2-saved',
 					title: 'Settings Saved',
 					message: 'Click here to reload NodeBB',
 					timeout: 2500,
@@ -78,4 +77,3 @@
 		});
 	});
 </script>
-</body>
