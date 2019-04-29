@@ -11,16 +11,6 @@ To customise options for this plugin, please consult the "Emailer (Gmail-Oauth2)
 Hello, 
 I appreciate you taking a look at my plugin. The purpose for this plugin was, I have a Google for Business account and so I have multiple domains (a primary which is my actual account email, but then secondary/alias domains, which when receiving emails, they all come into one inbox) on my account in which I can send and receive emails. With the "normal" way of using Gmail to send emails, you have to use your account login and password and it just sends as the email address in which your account login is. I wanted to be able to send out emails from NodeBB from one of my secondary/alias domains, with this plugin, you are able to do just that!
 
------------------
-
-### IMPORTANT NOTES - In order to send email from an address that is not your accounts primary email address it *must* be added to your gmail account as a secondary / alias email account. To know if it is properly added, you can open the https://mail.google.com and click Compose to begin writing a new email. In the From: field of the email message, if you are able to hit a dropdown and select a different email address to send from, then you will be able to put that address into the "Email Address" section within the Email Settings box. If not, you must properly add the domain and address to your account as a secondary/alias domain/address.
-
-Here are instructions for adding a secondary/alias domain to your Gmail account.
-https://mediatemple.net/community/products/googleapps/204645570/adding-a-domain-alias-in-g-suite
-
-Here are instructions for adding a secondary/alias email address to your Gmail account to be able to actually use it once the domain is added to your account as per above.
-https://support.google.com/mail/answer/22370
-
 -------------
 ## Installation
 
@@ -46,3 +36,12 @@ On this page, under the Email Address section, you will input the email address 
 
 
 
+-----------------
+
+### IMPORTANT NOTES - In order to send email from an address that is not your accounts primary email address it *must* be added to your gmail account as a secondary / alias email account. To know if it is properly added, you can open the https://mail.google.com and click Compose to begin writing a new email. In the From: field of the email message, if you are able to hit a dropdown and select a different email address to send from, then you will be able to put that address into the "Email Address" section within the Email Settings box. If not, you must properly add the domain and address to your account as a secondary/alias domain/address.
+
+Here are instructions for adding a secondary/alias domain to your Gmail account.
+https://mediatemple.net/community/products/googleapps/204645570/adding-a-domain-alias-in-g-suite
+
+Here are instructions for adding a secondary/alias email address to your Gmail account to be able to actually use it once the domain is added to your account as per above.
+https://support.google.com/mail/answer/22370
