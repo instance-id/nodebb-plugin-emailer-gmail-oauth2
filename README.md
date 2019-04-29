@@ -1,5 +1,5 @@
 
-# PLUGIN IS UNDER DEVELOPMENT AND TESTING - DO NOT USE! IT WILL NOT WORK YET!
+# PLUGIN IS UNDER DEVELOPMENT AND TESTING - While I do have it working as of 04/28/19, it is not advised to use it just yet.
 # NodeBB Emailer (Gmail-Oauth2)
 
 This NodeBB plugin allows NodeBB to send emails to users through the third-party transactional email service [Gmail-Oauth2](http://gmail.com).
