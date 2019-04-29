@@ -9,9 +9,10 @@ To customise options for this plugin, please consult the "Emailer (Gmail-Oauth2)
 ## Why you might want to use this plugin?
 
 Hello, 
-I appreciate you taking a look at my plugin. The purpose for this plugin was, I have a Google for Business account and so I have multiple domains (a primary which is my actual account email, but then secondary/alias domains, which when receiving emails, they all come into one inbox) on my account in which I can send and receive emails. With the "normal" way of using Gmail to send emails, you have to use your account login and password and it just sends as the email address in which your account login is. I wanted to be able to send out emails from NodeBB from one of my secondary/alias domains, with this plugin, you are able to do just that!
+I appreciate you taking a look at my plugin. The purpose for this plugin was, I have a Google for Business account and so I have multiple domains (a primary which is my actual account email, but then secondary/alias domains, which when receiving emails, they all come into one inbox) on my account in which I can send and receive emails. 
 
--------------
+With the "normal" way of using Gmail to send emails, you have to use your account login and password and it just sends as the email address in which your account login is. I wanted to be able to send out emails from NodeBB from one of my secondary/alias domains, with this plugin, you are able to do just that!
+
 ## Installation
 
 Setup is a bit complicated, so instead of rewriting all of the instructions from scratch, I am going to include some links to some in depth and very informative setup guides for some of the more standard parts of the install on the Google/Gmail side of things.
