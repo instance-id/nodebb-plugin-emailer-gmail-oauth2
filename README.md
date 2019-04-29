@@ -21,14 +21,20 @@ After installation and activation of the plugin, you can go to the Plugins menu 
 
  
 https://masashi-k.blogspot.com/2013/06/sending-mail-with-gmail-using-xoauth2.html
+
 (Many thanks to the writer of this blog post)
 
 After you follow all the steps within the blog above, you would have 5 total pieces of information.
 ClientID
+
 ClientSecret
+
 RefreshToken
+
 Authentication Email: (the primary email address of your account for authentication purposes)
+
 Authorized URL (This can just be the URL of your site, ex. https://forum.mysite.com)
+
 
 You will then input that information into the Emailer(Gmail-Oauth2) plugin page, save, and then rebuild/restart your forum.
 
