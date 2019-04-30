@@ -42,12 +42,10 @@ On this page, under the Email Address section, you will input the email address 
 
 ##### IMPORTANT NOTES - In order to send email from an address that is not your accounts primary email address it *must* be added to your gmail account as a secondary / alias email account. To know if it is properly added, you can open the https://mail.google.com and click Compose to begin writing a new email. In the From: field of the email message, if you are able to hit a dropdown and select a different email address to send from, then you will be able to put that address into the "Email Address" section within the Email Settings box. If not, you must properly add the domain and address to your account as a secondary/alias domain/address.
 
-Here are instructions for adding a secondary/alias domain to your Gmail account.
-
+Here are instructions for adding a secondary/alias domain to your Gmail account.  
 https://mediatemple.net/community/products/googleapps/204645570/adding-a-domain-alias-in-g-suite
 
-Here are instructions for adding a secondary/alias email address to your Gmail account to be able to actually use it once the domain is added to your account as per above.
-
+Here are instructions for adding a secondary/alias email address to your Gmail account to be able to actually use it once the domain is added to your account as per above.  
 https://support.google.com/mail/answer/22370
 
  ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
