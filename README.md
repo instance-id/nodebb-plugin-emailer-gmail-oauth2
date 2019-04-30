@@ -35,7 +35,7 @@ After you follow all the steps within the blog above, you would have 5 total pie
 
 You will then input that information into the Emailer(Gmail-Oauth2) plugin page, save, and then rebuild/restart your forum.
 
-After that is complete, in your admin panel, go to the Settings tab, and then Email.
+&nbsp;&nbsp;&nbsp;&nbsp;After that is complete, in your admin panel, go to the Settings tab, and then Email.
 On this page, under the Email Address section, you will input the email address you would like your email from the forum to actually be sent from.
 
 -----------------
