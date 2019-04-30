@@ -20,9 +20,7 @@ Hello,
 &nbsp;&nbsp;&nbsp;&nbsp;After installation and activation of the plugin, you can go to the Plugins menu in the admin page and you will find "Emailer (Gmail-Oauth2)". Inside there you will see places to input some data. In the link below you will find the instructions necessary to generate and obtain most of that information.
 
 
-https://masashi-k.blogspot.com/2013/06/sending-mail-with-gmail-using-xoauth2.html
-
-(Many thanks to the writer of this blog post)
+https://masashi-k.blogspot.com/2013/06/sending-mail-with-gmail-using-xoauth2.html  (Many thanks to the writer of this blog post)
 
 
 After you follow all the steps within the blog above, you would have 5 total pieces of information.
