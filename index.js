@@ -57,7 +57,7 @@ Emailer.init = function(params, callback) {
 				},
 			});
 		} else {
-			winston.error('[plugins/emailer-gmail-oauth2] You must fill out this shit!');
+			winston.error('[plugins/emailer-gmail-oauth2] You must fill in all fields on the Plugins -> Emailer(Gmail-Oauth2) page!');
 		}
 	});
 	params.router.get('/admin/plugins/emailer-gmail-oauth2', params.middleware.admin.buildHeader, render);
