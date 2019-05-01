@@ -8,7 +8,8 @@
 			</p>
 		</blockquote>
 			<p>
-				UNDER DEVELOPMENT!		
+			Please see the following for setup instructions!<br />
+			<a href="https://github.com/instance-id/nodebb-plugin-emailer-gmail-oauth2/blob/master/README.md">https://github.com/instance-id/nodebb-plugin-emailer-gmail-oauth2/blob/master/README.md</a>
 			</p>
 	</div>
 </div>
