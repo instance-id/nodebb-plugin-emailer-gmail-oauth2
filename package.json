@@ -1,7 +1,7 @@
 {
   "name": "nodebb-plugin-emailer-gmail-oauth2",
   "version": "0.0.1",
-  "description": "In development, do not use! An emailer plugin for NodeBB using Gmail Oauth2 as a third party service",
+  "description": "An emailer plugin for NodeBB using Gmail Oauth2 as a third party service",
   "main": "index.js",
   "repository": {
     "type": "git",
