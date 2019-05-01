@@ -15,7 +15,7 @@
     "oauth",
     "oauth2"
   ],
-  "author": "instance.id",
+  "author": "instance.id <support@instance.id> (https://instance.id)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/instance-id/nodebb-plugin-emailer-gmail-oauth2/issues"
