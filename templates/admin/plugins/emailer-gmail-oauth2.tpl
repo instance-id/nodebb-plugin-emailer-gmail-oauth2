@@ -49,8 +49,8 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="form-group">
-					<label for="authorizedURI">Authorized Redirect URI</label>
-					<input type="text" class="form-control" id="authorizedURI" name="redirectUrl" />
+					<label for="redirectUrl">Authorized Redirect URI</label>
+					<input type="text" class="form-control" id="redirectUrl" name="redirectUrl" />
 				</div>
 			</div>
 		</div>
