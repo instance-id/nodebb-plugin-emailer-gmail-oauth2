@@ -41,8 +41,8 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="form-group">
-					<label for="fromAddress">Address From:</label>
-					<input type="text" class="form-control" id="fromAddress" name="fromAddress" />
+					<label for="accountAddress">Account Address: </label>
+					<input type="text" class="form-control" id="accountAddress" name="accountAddress" />
 				</div>
 			</div>
 		</div>
