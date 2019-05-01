@@ -13,7 +13,7 @@ var clientId;
 var clientSecret;
 var redirectUrl;
 var refreshToken;
-var fromAddress;
+var accountAddress;
 
 // --- Getting settings for Oauth2 --------------
 Meta.settings.get('gmail-oauth2', function(err, settings) {
@@ -21,7 +21,6 @@ Meta.settings.get('gmail-oauth2', function(err, settings) {
 	clientSecret = settings.clientSecret; 
 	redirectUrl = settings.redirectUrl;
 	refreshToken = settings.refreshToken;
-	console.log('TEST : clientId from settings: ' + clientId);
 });
 
 // --- Required dependencies --------------------
@@ -50,7 +49,7 @@ Emailer.init = function(params, callback) {
 				service: 'Gmail',
 				auth: {
 					type: 'OAuth2',
-					user: settings.fromAddress,
+					user: settings.accountAddress,
 					clientId: settings.clientId,
 					clientSecret: settings.clientSecret,
 					refreshToken: settings.refreshToken,
