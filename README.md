@@ -49,7 +49,7 @@ Here are instructions for adding a secondary/alias domain to your Gmail account.
 Here are instructions for adding a secondary/alias email address to your Gmail account to be able to actually use it once the domain is added to your account as per above.  
 <https://support.google.com/mail/answer/22370>
 
- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-  ![alt text](https://i.imgur.com/cg5ow2M.png "Logo Title Text 1")
+
+![alt text](https://i.imgur.com/cg5ow2M.png "Logo Title Text 1")
 
  
