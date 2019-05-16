@@ -12,7 +12,7 @@ With the "normal" way of using Gmail to send emails, you have to use your accoun
 
 ## Installation
 
-Setup is a bit complicated, so instead of rewriting all of the instructions from scratch, I am going to include some links to some in depth and very informative setup guides for some of the more standard parts of the install on the Google/Gmail side of things.
+Setup takes a few steps, so instead of rewriting all of the instructions from scratch, I am going to include some links to some in depth and very informative setup guides for some of the more standard parts of the install on the Google/Gmail side of things.
 
 After installation and activation of the plugin, you can go to the Plugins menu in the admin page and you will find "Emailer (Gmail-Oauth2)". Inside there you will see places to input some data. In the link below you will find the instructions necessary to generate and obtain most of that information.
 
