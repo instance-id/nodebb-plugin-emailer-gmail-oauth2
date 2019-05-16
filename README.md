@@ -50,6 +50,6 @@ Here are instructions for adding a secondary/alias email address to your Gmail a
 <https://support.google.com/mail/answer/22370>
 
  ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-  ![alt text](https://i.imgur.com/cg5ow2M.png"Logo Title Text 1")
+  ![alt text](https://i.imgur.com/cg5ow2M.png" Logo Title Text 1")
 
  
